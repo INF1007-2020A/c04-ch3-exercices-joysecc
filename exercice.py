@@ -5,31 +5,38 @@
 import math
 
 def square_root(a: float) -> float:
-    return 0.0
+    return math.sqrt(a)
 
 
 def square(a: float) -> float:
-    return 0.0
+    a = a*a
+    return a
 
 
 def average(a: float, b: float, c: float) -> float:
-    return 0.0
+    d = (a + b + c)/3
+    return d
 
 
 def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float:
-    return 0.0
+    return math.radians(angle_degs + (angle_mins + (angle_secs / 60) / 60))
 
 
 def to_degrees(angle_rads: float) -> tuple:
-    return 0.0, 0.0, 0.0
+    angle_degs = math.degrees(angle_rads)
+    angle_mins = (angle_degs % 1)*60
+    angle_secs = (angle_mins % 1)*60
+    return angle_degs, angle_mins, angle_secs
 
 
 def to_celsius(temperature: float) -> float:
-    return 0.0
+    temperature = (temperature-32)/1.8
+    return temperature
 
 
 def to_farenheit(temperature: float) -> float:
-    return 0.0
+    temperature = 1.8*temperature+32
+    return temperature
 
 
 def main() -> None:
